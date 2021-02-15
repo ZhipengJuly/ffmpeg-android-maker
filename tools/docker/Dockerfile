@@ -4,7 +4,7 @@ FROM ubuntu:20.04
 # Versions of Android SDK and NDK. The CMake is installed via NDK.
 ARG VERSION_SDK=6609375
 ARG VERSION_NDK=21.3.6528147
-ARG VERSION_CMAKE=3.10.2.4988404
+ARG VERSION_CMAKE=3.18.1
 
 # Package to install via pip3
 ARG VERSION_MESON=0.53.2
