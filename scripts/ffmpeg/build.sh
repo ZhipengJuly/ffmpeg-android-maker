@@ -43,6 +43,22 @@ DEP_LD_FLAGS="-L${BUILD_DIR_EXTERNAL}/${ANDROID_ABI}/lib $FFMPEG_EXTRA_LD_FLAGS"
   --extra-ldflags="$DEP_LD_FLAGS" \
   --enable-shared \
   --disable-static \
+  --disable-parsers \
+  --disable-encoders \
+  --disable-decoders \
+  --enable-decoder=h264 \
+  --enable-decoder=hevc \
+  --disable-network \
+  --disable-demuxers \
+  --disable-muxers \
+  --disable-filters \
+  --enable-filter=acompressor \
+  --enable-filter=avgblur \
+  --enable-filter=gblur \
+  --enable-filter=colorspace \
+  --disable-bsfs \
+  --enable-bsf=h264_metadata \
+  --enable-bsf=hevc_metadata \
   --pkg-config=${PKG_CONFIG_EXECUTABLE} \
   ${EXTRA_BUILD_CONFIGURATION_FLAGS} \
   $ADDITIONAL_COMPONENTS || exit 1
